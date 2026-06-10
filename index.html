@@ -40,10 +40,13 @@
                 <div class="after"></div>
             </div>
         </div>
+
+        <!-- Audio -->
+        <audio src="hbd.mp3" id="audio"></audio>
     </div>
     <script>
         // Hitung mundur dari hari ini sampai tanggal yang ditetapkan
-        const targetDate = new Date("2026-06-11T24:00:00").getTime();
+        const targetDate = new Date("2026-06-10T24:00:00").getTime();
         const timerElement = document.getElementById("timer");
 
         function updateTimer() {
@@ -59,6 +62,10 @@
                 let body = document.getElementsByTagName("body")[0];
                 body.classList.remove("bg-purple-600");
                 body.classList.add("bg-black");
+
+                // Tampilkan audio
+                const audio = document.getElementById("audio");
+                audio.play();
 
                 clearInterval(timerInterval);
                 return;
